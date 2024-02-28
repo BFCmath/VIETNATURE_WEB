@@ -7,11 +7,20 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-} 
+
+.navbar {
+    /* overflow: hidden; */
+    background-color: #333;
+    position: fixed;
+    /* display: flex; */
+    /* align-items: center; */
+    /* padding: 20px; */
+    top: 0;
+    left: 0% ;
+    right: 30px ;
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
 
 .price_name{
     color: #000;
@@ -41,19 +50,20 @@ p{
     color: rgb(194, 181, 181);
 }
 
-.header{
+.myheader{
     background: #000; 
+    margin-bottom: 20px;
+
 }
 
-.header .row{
+.myheader .row{
     margin-top: 70px;
 }
 
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+.text-center{
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .row{
@@ -62,31 +72,31 @@ p{
     flex-wrap: wrap;
     justify-content: space-around;   
 }
-
-/* .row {
-   display: flex;
-   flex-wrap: nowrap;
-   overflow-x: auto;
-   -webkit-overflow-scrolling: touch;
-   -ms-overflow-style: -ms-autohiding-scrollbar; 
+.balance {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
 }
 
-.box-container {
-  flex: 0 0 auto; 
-} */
+.phone-number {
+    font-size: 15px;
+    color: yellow;
+}
+
+.phone-number-label {
+    margin-bottom: 10px; /* Add some space between the label and value */
+}
+
+.phone-number-value {
+    font-weight: bold; /* Optionally make the phone number bold */
+}
+
 
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
 }
 
-/* .col-2 img{
-    max-width: 100%;
-    padding: 50px 0;
-    height: 450px;
-    /* margin-left: 20%; */
-    /* place-self: center;
-} */ 
+
 .center {
     display: block;
     margin-left: auto;
@@ -116,11 +126,11 @@ p{
 .cart-img{
   filter: invert(100%);
   -webkit-filter: invert(100%);
+  margin-right: 10px;
 }
 
 .btn-main:hover{
     background-color: #170653;
-
 }
 
 .categories{
@@ -138,6 +148,7 @@ p{
 }
 
 .small-container{
+    padding-top: 20px;
     max-width: 1080px;
     margin: auto;
     padding-left: 15px;
@@ -321,13 +332,16 @@ small{
 
 
 .footer{
-    background: #000;
+    background: #2e2c2c;
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
 }
 
 .footer p{
+    color: #8a8a8a;
+}
+.footer a{
     color: #8a8a8a;
 }
 
@@ -340,7 +354,28 @@ small{
     min-width: 250px;
     margin-bottom: 20px;
 }
+.footer-col-3,.footer-col-4 {
+    /* Add styles for the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+.centered-list {
+    /* Add styles for the list */
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center text within list items */
+}
 
+.centered-list li {
+    /* Add styles for list items */
+    margin: 5px 0; /* Adjust margin as needed */
+    color: black;
+    transition: color 2s; 
+}
+.centered-list li a:hover {
+    color: rgb(222, 233, 101);
+}
 .footer-col-1{
     flex-basis: 30%;
 }
@@ -355,16 +390,38 @@ small{
     margin-bottom: 20px;
 }
 
-.footer-col-3, .footer-col-4{
+.footer-col-3{
     flex-basis: 12%;
     text-align: center;
+}
+.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.footer-col-3 ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    grid-gap: 5px; /* Add some gap between the images */
+}
+.footer-col-3 ul li {
+    list-style: none; /* Remove default list styles */
+    
+}
+
+.footer-col-3 ul li img {
+    width: 100%; /* Set the width of each image to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Limit the maximum height of each image */
 }
 
 ul{
     text-decoration: none;
     list-style: none;
 }
-
+.logo{
+    margin-bottom: 20px;
+    /* background-color: #fff; */
+}
 .app-logo{
     margin-top: 20px;
 }
@@ -372,8 +429,33 @@ ul{
 .app-logo img{
     height: 50px;
     width: 50px;
+    background-image: url('black-house.svg'); /* Replace 'black-house.svg' with the path to your black house image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-color: rgb(253, 253, 253); /* Set the background color to yellow */
 }
-
+.address-logo img{
+    height: 60px;
+    width: 50px;
+    background-image: url('black-house.svg'); /* Replace 'black-house.svg' with the path to your black house image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    /* background-color: rgb(253, 253, 253); */
+    margin-right: 10px;
+    margin-bottom: 15px;
+    /* filter: invert(100%); */
+    /* -webkit-filter: invert(100%); */
+}
+.phone-logo img{
+    height: 50px;
+    width: 40px;
+    /* background-image: url('black-house.svg');  */
+    background-size: cover; /* Ensure the image covers the entire container */
+    /* background-color: rgb(253, 253, 253); */
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* filter: invert(100%); */
+    /* -webkit-filter: invert(100%); */
+}
 .footer hr{
     border: none;
     background: #b5b5b5;
@@ -418,4 +500,75 @@ ul{
         display: block;
         cursor: pointer;
     }
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: rgb(219, 110, 110);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(68, 64, 64);
+    color: white;
+    opacity: 0.9; 
+    min-width: 80px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #0f0f0f;
+    color: rgb(173, 58, 58);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+#menu-items li:hover a {
+    color: yellow; /* Change text color to yellow on hover */
+}
+
+.dark-ground{
+    background-color: #000;
+}
+
+.blurred-image img {
+    filter: blur(3px); /* Adjust the blur amount as needed */
+}
+
+.tour-img{
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: auto;
+}
+.tour-margin{
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    
 }

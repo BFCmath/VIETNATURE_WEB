@@ -1,0 +1,165 @@
+/* body,
+html {
+  padding: 0 10px;
+  margin: 0;
+  background: #0e0f11;
+  color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+p {
+  text-align: center;
+}
+
+p {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+} 
+a:link,
+a:hover,
+a:active,
+a:visited {
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+}
+a:hover {
+  color: #7f8c8d;
+  text-decoration: underline;
+} */
+.gallery-h1{
+    text-align: center;
+    color: #ecf0f1;
+}
+.gallery-h1 a {
+  color: inherit; /* Use the default text color */
+  text-decoration: none; /* Remove the underline */
+  transition: font-size 0.3s ease, color 0.5s ease; /* Apply transition for font-size and background-color */
+}
+
+.gallery-h1:hover a {
+  font-size: 120%; /* Increase font size on hover */
+  color: yellow; /* Change background color to yellow on hover */
+}
+.gallery-contain {
+  width: 100%;
+}
+.gallery-row {
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    width: 100%;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+  }
+  
+/* Customize scrollbar color */
+.gallery-row::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.gallery-row::-webkit-scrollbar-thumb {
+background-color: #ffffff; /* Change the color of the scrollbar thumb */
+}
+
+/* Customize scrollbar width */
+.gallery-row::-webkit-scrollbar {
+width: 5px; /* Change the width of the scrollbar */
+}
+
+.gallery-row::-webkit-scrollbar-track {
+background-color: #000000; /* Change the color of the scrollbar track */
+}
+.row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 50.3125px 0;
+  padding-bottom: 5px;
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.tile__img {
+  width: 250px;
+  height: 140.625px;
+  object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+/* .tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+} */
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: #f1f1f1;
+}
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}

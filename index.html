@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="du">
+<html lang="du" >
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- ----------main style------------ -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="introduction.css">
+        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="a.css">
         <!-- ------------Google Fonts-------------- -->
         <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
@@ -16,29 +20,43 @@
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7F3URup7S4Of3R3cJQLk535vNnUQRzg&callback=initMap">
         </script>
-        <title>ElectroHub | World's Best Market</title>
+        <title>Vietnature</title>
+        <link rel="icon" href="images\logo.png" type="image/x-icon">
     </head>
 
     <body>
-        <div class="header">
+        <div class="myheader">
             <div class="container">
                 <div class="navbar">
-                    <div class="logo">
+                    <div class="" style="margin-left:20px">
                         <img src="images/logo.png" style="height:60px;" alt="logo-image">
                     </div>
                     <nav>
                         <ul id="menu-items">
                             <li><a href="">Home</a></li>
-                            <li><a href="index2.html">Products</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="register.html">Account</a></li>
+                            <li><div class="dropdown">
+                                <a href="">Tours</a>
+                                <div class="dropdown-content">
+                                  <a href="#">Tour 1</a>
+                                  <a href="#">Tour 2</a>
+                                  <a href="#">Tour 3</a>
+                                </div>
+                              </div></li>
+                            <li><a href="about.html">Service</a></li>
+                            <li><a href="about.html">Gallery</a></li>
+                            <li><a href="contact.html">About us</a></li>
+                            <li><a href="register.html">Get a ticket</a></li>
+                            
                         </ul>
                     </nav>
-                    <img src="images/cart.png" alt="cart" width="30px" height="30px" class="cart-img">
-                    <img src="images/menu.png" alt="menu" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
+                    <img src="images/phone-number.png" alt="Phone Icon" width="30px" height="40px" class="cart-img">
+                    <div class="phone-number" style="margin-right:20px">
+                        <div class="phone-number-label">Phone number</div>
+                        <div class="phone-number-value">0985 880 680</div>
+                    </div>                    
+                    <!-- <img src="images/menu.png" alt="menu" width="30px" height="30px" class="menu-icon" onclick="menutoggle()"> -->
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6 ">
                         <h1 class="text-white">Great deals happening <br> Right Now!</h1>
                         <p>Enjoy a safe, convenient shopping experience</p>
@@ -49,362 +67,402 @@
                         <img src="images/laptop-banner.png" alt="banner-image" class="center">
                     </div>
 
-                </div>
+                </div> -->
             </div>
         </div>
-        <!-- featured products -->
-        <div class="small-container mt-5">
-            <h2 class="title">Featured Products</h2>
-            <div class="row horizontal-scroll-wrapper squares">
-                <div class="col-4 box-container">
-                    <div class="image-overlay"></div>
-                    <img src="images/power-tab.jpeg" alt="tablet pc">
-                    <h5 class="product_name">Tablet Pc</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Tablet Pc</h3>
-                        <h4 class="content-price">Rs1000.99</h4>
-                        <div class="content-btn btn btn-secondary" title="Add to Cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                    <!-- <div class="btn btn-secondary" title="Preview Item"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                    </div> -->
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/ps4-gaming.jpg" alt="Gaming console">
-                    <h5 class="product_name">X-box Console</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs2000</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/iphonex-phone.jpg" alt="Iphone X">
-                    <h5 class="product_name">IPhone X</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <p class="price_name" >Rs4999.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/keyboard.jpg" alt="keyboard">
-                    <h5 class="product_name">Logitech Super Slim</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs199.99</p>
-                </div>
+        <!-- welcome -->
+        <div id="carouselExampleCaptions" class="carousel slide dark-ground">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <!-- Latest products -->
-            <h2 class="title">Latest Products</h2>
-            <div class="row">
-                <div class="col-4 box-container">
-                    <img src="images/Alienware-laptop.png" alt="Gaming Laptop">
-                    <h5 class="product_name">X-box Console</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs2000</p>
+            <div class="carousel-inner">
+              <div class="carousel-item active dark-ground blurred-image">
+                <img src="images/Flicker_bird.jpg" class="rounded mx-auto d-block" style="height: 75vh;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 style="color:rgb(176, 81, 44);font-size: 250%" class="introduction-header">VIETNATURE</h1>
+                  <h3>Looking after nature is looking after our children's future.</h3>
                 </div>
-                <div class="col-4 box-container">
-                    <img src="images/canon-cam.jpg" alt="Camera">
-                    <h5 class="product_name">Canon 12X Pro Shoot</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs990</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/iphone9-phone.jpg" alt="Iphone SE">
-                    <h5 class="product_name">IPhone SE</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs4999.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/logitech-tab.png" alt="Tablet Pc">
-                    <h5 class="product_name">Samsung Tablet PC</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="price_name" >Rs3999.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/imac.jpg" alt="Imac">
-                    <h5 class="product_name">Apple Imac</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs7999.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/thunderbolt.jpeg" alt="Gaming Laptop">
-                    <h5 class="product_name">USB Type-C Thunderbolt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs200</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/laptop-gaming.jpg" alt="Gaming Laptop">
-                    <h5 class="product_name">Alienware Laptop</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs7000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/cod-ps4.jpg" alt="Playstation 4">
-                    <h5 class="product_name">Call of Duty MW</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/phantom-drone.png" alt="Phantom Drone">
-                    <h5 class="product_name">Phantom Drone</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="price_name" >Rs2500.00</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/epson-projector.png" alt="Epson Projector">
-                    <h5 class="product_name">Epson Projector</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/ps4-headset.jpg" alt="Gaming Headset">
-                    <h5 class="product_name">Ps4 Gaming Headset</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs800</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/superbass-speakers.jpg" alt="Super Bass Laptop Speakers">
-                    <h5 class="product_name">Super Bass USB Speakers</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1500</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/xbox-game.jpg" alt="Fifa 20 Xbox">
-                    <h5 class="product_name">Fifa 20 Xbox</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs300</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/xbox-headset.jpg" alt="Xbox Headset">
-                    <h5 class="product_name">X-box Headset</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/falcon-drone.jpg" alt="falcon-drone">
-                    <h5 class="product_name">Falcon Drone</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs3000</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/ps4-fortnite.jpg" alt="Fortnite">
-                    <h5 class="product_name">Ps4 Fornite</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs300</p>
-                </div>
+              </div>
+              <div class="carousel-item dark-ground blurred-image">
+                <img src="images/Flicker_gibbon.jpg" class="rounded mx-auto d-block" style="height: 75vh;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1  style="color:rgb(176, 81, 44);font-size: 250%" class="introduction-header" >VIETNATURE</h1>
+                    <h3>Looking after nature is looking after our children's future.</h3>
+                  </div>
+              </div>
+              <div class="carousel-item dark-ground blurred-image">
+                <img src="images/Flicker_gaur.jpg" class="rounded mx-auto d-block" style="height: 75vh;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1  style="color:rgb(176, 81, 44);font-size: 250%" class="introduction-header">VIETNATURE</h1>
+                    <h3>Looking after nature is looking after our children's future.</h3>
+                  </div>
+              </div>
             </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- introduction -->
+        <div  class="scroll-background">
+              <div id="slide2" class="lmao parallax">
+                <div class="title">
+                  <h1 style="font-size: 250%">Slide 2</h1>
+                  <p class="introduction-p">Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+                </div>
+                    <img src="images\Flicker_gaur.jpg" class="introduction-img">
+                    <img src="images\Flicker_tree.jpg" class="introduction-img last-of-type"> 
+              </div>
+        </div> 
 
-        <!-- offer -->
-        <div class="offer">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-6">
-                        <img src="images/asus-banner.png" class="offer-img">
+        <!-- Tours -->
+        <div class="tour-margin dark-ground">
+            <section class="articles ">
+                <article class="myarticle">
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="images/Flicker_gibbon.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
                     </div>
-                    <div class="col-6 text-data text-white">
-                        <p>Top Prodcuts you should take it</p>
-                        <h1>Best Product limitd offer!</h1>
+                  </div>
+                </article>
+                <article class="myarticle">
+              
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="images/Flicker_gibbon.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+                <article class="myarticle">
+              
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="images/Flicker_gibbon.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </section>
+        </div>
+        <!-- Gallery -->
+        <div class="gallery-contain dark-ground">
+            
+            <h1 class="gallery-h1"><a href="#">Gallery</a></h1>
+            <!-- <h1 class="gallery-h1">Animals You Will Meet!</h1> -->
+            <div class="gallery-row">
+                <div class="row__inner">
+            
+                <div class="tile">
+                    <div class="tile__media">
+                    <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                    <div class="tile__title">
+                        Top Gear
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                    <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                        Top Gear
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="tile">
+                        <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                        </div>
+                    </div>
+                
+                    <div class="tile">
+                        <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                        </div>
+                    </div>
+                
+                    <div class="tile">
+                        <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                        </div>
+                    </div>
+                
+                    <div class="tile">
+                        <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                        </div>
+                    </div>
+                
+                    <div class="tile">
+                        <div class="tile__media">
+                        <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                        </div>
+                        <div class="tile__details">
+                            <div class="tile__title">
+                            Top Gear
+                            </div>
+                        </div>
+                        </div>
+                    
+                        <div class="tile">
+                            <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                            </div>
+                            <div class="tile__details">
+                            <div class="tile__title">
+                                Top Gear
+                            </div>
+                            </div>
+                        </div>
+                    
+                        <div class="tile">
+                            <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                            </div>
+                            <div class="tile__details">
+                            <div class="tile__title">
+                                Top Gear
+                            </div>
+                            </div>
+                        </div>
+                    
+                        <div class="tile">
+                            <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                            </div>
+                            <div class="tile__details">
+                            <div class="tile__title">
+                                Top Gear
+                            </div>
+                            </div>
+                        </div>
+                    
+                        <div class="tile">
+                            <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                            </div>
+                            <div class="tile__details">
+                            <div class="tile__title">
+                                Top Gear
+                            </div>
+                            </div>
+                        </div>
+                    
+                        <div class="tile">
+                            <div class="tile__media">
+                            <img class="tile__img" src="images/Flicker_gibbon.jpg" alt=""  />
+                            </div>
+                            <div class="tile__details">
+                            <div class="tile__title">
+                                Top Gear
+                            </div>
+                            </div>
+                        </div>
                         
-                        <a href="" class="btn">Buy Now &#8594</a>
-                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="locate">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-2">
-                        <h3>My Google Maps Demo</h3>
-                        <div id="map"></div>
-                    </div>
-                    <div class="col-2">
-
-                    </div>
-                </div>
+            
             </div>
-        </div>
-
-        <!-- brands -->
-        <div class="brands">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="images/amazon_PNG24.png" alt="amazon logo">
-                    </div>
-                    <div class="col-3">
-                        <img src="images/apple_logo_PNG19675.png" alt="apple logo">
-                    </div>
-                    <div class="col-3">
-                        <img src="images/samsung_logo_PNG2.png" alt="samsung logo">
-                    </div>
-                    <div class="col-3">
-                        <img src="images/mastercard_PNG7.png" alt="mastercard logo">
-                    </div>
-                    <div class="col-3">
-                        <img src="images/paypal_PNG19.png" alt="mastercard logo">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- -------footer------ -->
+        <!-- -------footer------>
         <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="footer-col-1">
-                        <h3>Download our app</h3>
-                        <p>Top G5  Enabled Prodcuts with good support</p>
-                        <div class="app-logo">
-                            <img src="images/playstore.png" alt="">
-                            <img src="images/appstore.png" alt="">
+                        <div class="balance">
+                            <div class="logo">
+                                <img src="images/logo.png" style="height:80px;" alt="logo-image">
+                            </div>
+                            <div style="margin-left: 20px;">
+                                <h3>Vietnature Tour</h3>
+                            </div>
                         </div>
+                        <div class="balance">
+                            <div class="address-logo">
+                                <img src="images/address-icon.png" alt="">
+                            </div>
+                            <div>
+                                <p>No.14/4,15 Str, Tam Hiep Hamlet, Xuan Hiep commune, Xuan Loc Dist, Dong Nai Province, Viet Nam</p>
+                            </div>
+                        </div>
+                        <div class="balance">
+                            <div class="phone-logo">
+                                <img src="images/phone-number.png" alt="">
+                            </div>
+                            <div>
+                                <p>+84 (0) 985.880.680</p>
+                                <p>+84 (0) 948.850.468</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="footer-col-2">
-                        <img src="images" alt="">
-                        <p>Best technology enabled product?</p>
-                    </div>
+                    <div class="footer-col-4 ">
+                        <div>
+                            <h3>Explore</h3>
+                        </div>
+                        <ul class="centered-list">
+                            <li><a href="#">Tour 1</a></li>
+                            <li><a href="#">Tour 2</a></li>
+                            <li><a href="#">Tour 3</a></li>
+                            <li><a href="about.html">Service</a></li>
+                            <li><a href="contact.html">About us</a></li>
+                        </ul>
+                    </div>                    
                     <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
+                        <h3>Highlights</h3>
+                        <ul class="centered-list">
+                            <li><img src="images/Flicker_tree.jpg" style="height:80px;" alt="bird"></li>
+                            <li><img src="images/Flicker_gaur.jpg" style="height:80px;" alt="bird"></li>
+                            <li><img src="images/Flicker_crocodila.jpg" style="height:80px;" alt="bird"></li>
+                            <li><img src="images/Flicker_gibbon.jpg" style="height:80px;" alt="bird"></li>
                         </ul>
                     </div>
                     <div class="footer-col-4">
                         <h3>Follow Us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>YouTube</li>
+                        <ul class="centered-list">
+                            <li><a href="https://www.youtube.com/channel/UCD5uP74iAKhqySISbs2-JTA" target=”_blank”>Youtube</a></li>
+                            <li><a href="https://www.facebook.com/cattienwildtours/" target=”_blank”>Facebook</a></li>
+                            <li><a href="https://www.facebook.com/wildlifewatchingvietnam/" target=”_blank”>Contact us</a></li>
+                            <li><a href="https://maps.app.goo.gl/27oKwzycsiCAtb1T8" target=”_blank”>Location</a></li>
                         </ul>
                     </div>
                 </div>
                 <hr>
-                <p class="copyright">Copyright 2021 Sarthak</p>
+                <!-- <p class="copyright">Copyright 2021 Sarthak</p> -->
             </div>
         </div>
+        
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
             <!--Load the API from the specified URL
             * The async attribute allows the browser to render the page while the API loads
             * The key parameter will contain your own API key (which is not needed for this tutorial)
